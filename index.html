@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sadafatoune - Accessoires élégants pour femmes. Pochettes téléphone, bracelets et accessoires féminins.">
+    <meta name="keywords" content="accessoires femmes, pochettes téléphone, bracelets, bijoux, mode féminine">
+    <title>Sadafatoune - Accessoires Élégants pour Femmes</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🌸 HEADER / NAVIGATION -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <img src="assets/logo.svg" alt="Sadafatoune Logo" class="nav__logo-img">
+                <span class="nav__logo-text">Sadafatoune</span>
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active">Accueil</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Produits</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#order" class="nav__link">Commander</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <button class="cart__button" id="cart-button">
+                    <svg class="cart__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 2L7 6H3L6 20H18L21 6H17L15 2H9Z"/>
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="15" cy="21" r="1"/>
+                    </svg>
+                    <span class="cart__count" id="cart-count">0</span>
+                </button>
+                
+                <div class="nav__toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🌸 HERO SECTION -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="hero" id="home">
+        <div class="hero__background">
+            <div class="hero__shape hero__shape-1"></div>
+            <div class="hero__shape hero__shape-2"></div>
+            <div class="hero__shape hero__shape-3"></div>
+        </div>
+        
+        <div class="hero__container container">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="hero__title-main">Sadafatoune</span>
+                    <span class="hero__title-sub">Accessoires élégants pour femmes</span>
+                </h1>
+                <p class="hero__description">
+                    Découvrez notre collection exclusive de pochettes téléphone, bracelets et accessoires féminins
+                </p>
+                <div class="hero__buttons">
+                    <a href="#products" class="btn btn-primary">Découvrir</a>
+                    <a href="#order" class="btn btn-secondary">Commander</a>
+                </div>
+            </div>
+            
+            <div class="hero__image">
+                <div class="hero__image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&h=600&fit=crop" alt="Accessoires féminins" class="hero__img">
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero__scroll">
+            <a href="#products" class="hero__scroll-link">
+                <span>Défiler</span>
+                <svg class="hero__scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🌸 PRODUCTS SECTION -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="products section" id="products">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Nos Produits</h2>
+                <p class="section__subtitle">Une sélection raffinée d'accessoires pour sublimer votre style</p>
+            </div>
+            
+            <div class="products__grid" id="products-grid">
+                <!-- Products will be dynamically loaded here from config.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🌸 ORDER SECTION -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="order section" id="order">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Passer une Commande</h2>
+                <p class="section__subtitle">Remplissez le formulaire ci-dessous et nous vous contacterons rapidement</p>
+            </div>
+            
+            <div class="order__container">
+                <form class="order__form" id="order-form">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Nom Complet *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            class="form__input" 
+                            placeholder="Votre nom complet"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="phone" class="form__label">Numéro de Téléphone *</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            class="form__input" 
+                            placeholder="+212 6XX XXX XXX"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form__group">
+                        <label class="form__label">Produits dans le panier *</label>
+                        <div class="form__cart-summary" id="form-cart-summary">
+                            <p class="form__cart-empty">Votre panier est vide. Ajoutez des produits avant de commander.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="address" class="form__label">Adresse de Livraison *</label>
+                        <textarea 
+                            id="address" 
+                            name="address" 
+                            class="form__input form__textarea" 
+                            placeholder="Votre adresse complète"
+                            rows="4"
+                            required
+                        ></textarea>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="notes" class="form__label">Notes (Optionnel)</label>
+                        <textarea 
+                            id="notes" 
+                            name="notes" 
+                            class="form__input form__textarea" 
+                            placeholder="Informations supplémentaires..."
+                            rows="3"
+                        ></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                        <span class="btn__text">Envoyer la Commande</span>
+                        <span class="btn__loader"></span>
+                    </button>
+                </form>
+                
+                <div class="order__info">
+                    <div class="info__card">
+                        <div class="info__icon">📱</div>
+                        <h3 class="info__title">Contactez-nous</h3>
+                        <p class="info__text" id="contact-phone">+212 6XX XXX XXX</p>
+                    </div>
+                    
+                    <div class="info__card">
+                        <div class="info__icon">📧</div>
+                        <h3 class="info__title">Email</h3>
+                        <p class="info__text" id="contact-email">contact@sadafatoune.com</p>
+                    </div>
+                    
+                    <div class="info__card">
+                        <div class="info__icon">📍</div>
+                        <h3 class="info__title">Adresse</h3>
+                        <p class="info__text" id="contact-address">Casablanca, Maroc</p>
+                    </div>
+                    
+                    <div class="info__card">
+                        <div class="info__icon">⏰</div>
+                        <h3 class="info__title">Livraison</h3>
+                        <p class="info__text">2-3 jours ouvrables</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🌸 CONTACT SECTION -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Suivez-nous</h2>
+                <p class="section__subtitle">Restez connectés pour découvrir nos nouveautés</p>
+            </div>
+            
+            <div class="social__links">
+                <a href="#" class="social__link" id="instagram-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    <span id="instagram-handle">@sadafatoune</span>
+                </a>
+                
+                <a href="#" class="social__link" id="facebook-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    <span id="facebook-handle">Sadafatoune</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🌸 FOOTER -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="assets/logo.svg" alt="Sadafatoune" class="footer__logo-img">
+                    <span class="footer__logo-text">Sadafatoune</span>
+                </div>
+                <p class="footer__text">
+                    Accessoires élégants pour femmes
+                </p>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    &copy; 2024 Sadafatoune. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🌸 SHOPPING CART SIDEBAR -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div class="cart__sidebar" id="cart-sidebar">
+        <div class="cart__overlay" id="cart-overlay"></div>
+        <div class="cart__panel">
+            <div class="cart__header">
+                <h2 class="cart__title">Panier</h2>
+                <button class="cart__close" id="cart-close">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="cart__body" id="cart-items">
+                <!-- Cart items will be inserted here -->
+                <div class="cart__empty" id="cart-empty">
+                    <div class="cart__empty-icon">🛍️</div>
+                    <p class="cart__empty-text">Votre panier est vide</p>
+                    <button class="btn btn-secondary" id="continue-shopping">Continuer vos achats</button>
+                </div>
+            </div>
+            
+            <div class="cart__footer" id="cart-footer">
+                <div class="cart__total">
+                    <span class="cart__total-label">Total:</span>
+                    <span class="cart__total-amount" id="cart-total">0 DH</span>
+                </div>
+                <button class="btn btn-primary cart__checkout" id="checkout-button">
+                    Passer la commande
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🌸 THANK YOU MODAL -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div class="modal" id="thank-you-modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <div class="modal__icon">✨</div>
+            <h2 class="modal__title">Merci pour votre commande !</h2>
+            <p class="modal__text">
+                Votre commande a été enregistrée avec succès.<br>
+                Nous vous contacterons très bientôt pour confirmer les détails.
+            </p>
+            <div class="modal__order-details" id="order-details">
+                <!-- Order details will be inserted here -->
+            </div>
+            <button class="btn btn-primary" id="close-modal">Fermer</button>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!-- 🌸 SCRIPTS -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
